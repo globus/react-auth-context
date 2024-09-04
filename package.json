@@ -1,12 +1,12 @@
 {
   "name": "@globus/react-auth-context",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A React context for integrating Globus Auth into your application using the Globus JavaScript SDK",
   "main": "dist/umd/index.js",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/esm/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/esm/index.d.ts",
       "import": "./dist/esm/index.js",
       "require": "./dist/umd/index.js"
     },
