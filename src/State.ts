@@ -1,4 +1,4 @@
-import type { AuthorizationManager } from "@globus/sdk/esm/lib/core/authorization/AuthorizationManager";
+import type { AuthorizationManager } from "@globus/sdk/core/authorization/AuthorizationManager";
 
 export type GlobusAuthState = {
   isAuthenticated: boolean;

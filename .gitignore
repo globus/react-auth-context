@@ -3,3 +3,5 @@ temp
 etc
 lib
 dist
+
+.DS_Store

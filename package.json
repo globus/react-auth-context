@@ -1,6 +1,6 @@
 {
   "name": "@globus/react-auth-context",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A React context for integrating Globus Auth into your application using the Globus JavaScript SDK",
   "main": "dist/umd/index.js",
   "types": "dist/types/index.d.ts",
@@ -17,18 +17,19 @@
   ],
   "scripts": {
     "build": "node scripts/build.js && npm run build:types",
-    "build:types": "tsc --emitDeclarationOnly && api-extractor run",
-    "test": "jest"
+    "build:types": "tsc --emitDeclarationOnly",
+    "test": "jest",
+    "docs": "npx typedoc"
   },
   "author": "Joe Bottigliero",
   "license": "Apache-2.0",
   "peerDependencies": {
-    "@globus/sdk": "^3.4.1",
+    "@globus/sdk": "^4.0.0-rc.1",
     "react": ">=18",
     "react-dom": ">=18"
   },
   "devDependencies": {
-    "@globus/sdk": "^3.4.1",
+    "@globus/sdk": "^4.0.0-rc.1",
     "@testing-library/dom": "^10.1.0",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
@@ -36,7 +37,6 @@
     "@types/jest": "^29.5.12",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "api-extractor": "^99.99.99",
     "esbuild": "0.21.5",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
@@ -45,6 +45,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "ts-jest": "^29.1.5",
+    "typedoc": "^0.26.6",
+    "typedoc-plugin-markdown": "^4.2.6",
     "typescript": "^5.4.5"
   }
 }

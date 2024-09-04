@@ -9,8 +9,7 @@ import { initialState } from "./State";
 import { reducer } from "./reducer";
 
 import { authorization } from "@globus/sdk";
-import type { AuthorizationManagerConfiguration } from "@globus/sdk/esm/lib/core/authorization/AuthorizationManager";
-
+import type { AuthorizationManagerConfiguration } from "@globus/sdk/core/authorization/AuthorizationManager";
 
 export type Props = React.PropsWithChildren<AuthorizationManagerConfiguration & {
   /**
@@ -19,6 +18,9 @@ export type Props = React.PropsWithChildren<AuthorizationManagerConfiguration & 
   environment?: string
 }>
 
+/**
+ * @public
+ */
 export const Provider = ({
   environment,
   children,
@@ -30,43 +32,47 @@ export const Provider = ({
   }
   const [state, dispatch] = useReducer(reducer, initialState);
   const [instance, setInstance] = useState<
-    ReturnType<typeof authorization.create> | undefined
-  >(undefined);
+    ReturnType<typeof authorization.create>
+  >();
   
+  const handleAuthenticated = ({
+    isAuthenticated,
+  }: {
+    isAuthenticated: boolean;
+  }) => {
+    dispatch({ type: "AUTHENTICATED", payload: isAuthenticated });
+  };
+
+  const handleRevoke = () => {
+    dispatch({ type: "REVOKE" });
+  };
+
+
+  const {
+    redirect,
+    scopes, 
+    client
+  } = authorizationManagerConfigruation;
+
   useEffect(() => {
     const i = authorization.create({
+      redirect,
+      scopes,
+      client,
       useRefreshTokens: true,
-      ...authorizationManagerConfigruation
+      events: {
+        authenticated: handleAuthenticated,
+        revoke: handleRevoke,
+      },
     });
+
     setInstance(i);
-  }, []);
-
-  /**
-   * Register event listeners for the authorization instance.
-   */
-  useEffect(() => {
-    if (!instance) return;
-
-    const handleRevoke = () => {
-      dispatch({ type: "REVOKE" });
-    };
-
-    instance.events.revoke.addListener(handleRevoke);
-
-    const handleAuthenticated = ({
-      isAuthenticated,
-    }: {
-      isAuthenticated: boolean;
-    }) => {
-      dispatch({ type: "AUTHENTICATED", payload: isAuthenticated });
-    };
-    instance.events.authenticated.addListener(handleAuthenticated);
 
     return () => {
-      instance.events.revoke.removeListener(handleRevoke);
-      instance.events.authenticated.removeListener(handleAuthenticated);
+      i.events.revoke.removeListener(handleRevoke);
+      i.events.authenticated.removeListener(handleAuthenticated);
     };
-  }, [instance]);
+  }, [redirect, scopes, client]);
 
   return (
     <Context.Provider
