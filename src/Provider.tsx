@@ -18,9 +18,6 @@ export type Props = React.PropsWithChildren<AuthorizationManagerConfiguration & 
   environment?: string
 }>
 
-/**
- * @public
- */
 export const Provider = ({
   environment,
   children,
