@@ -1,6 +1,6 @@
 {
   "name": "@globus/react-auth-context",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A React context for integrating Globus Auth into your application using the Globus JavaScript SDK",
   "main": "dist/umd/index.js",
   "types": "dist/types/index.d.ts",
