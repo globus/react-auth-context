@@ -1,8 +1,7 @@
 {
   "extends": "@tsconfig/create-react-app/tsconfig.json",
   "compilerOptions": {
-    "target": "ES2019",
-    "esModuleInterop": true,
+    "target": "es2019",
     "declaration": true,
     "declarationMap": true,
     "rootDir": "./src",

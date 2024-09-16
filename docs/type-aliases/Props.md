@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[Provider.tsx:14](https://github.com/globus/react-auth-context/blob/8f79b283008ddbbf08560a9d933d93f2184363e6/src/Provider.tsx#L14)
+[Provider.tsx:14](https://github.com/globus/react-auth-context/blob/2c31bc060e9e5dfb4ea8fae77304d11aff810855/src/Provider.tsx#L14)

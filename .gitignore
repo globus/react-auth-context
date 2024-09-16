@@ -4,4 +4,7 @@ etc
 lib
 dist
 
+yalc.lock
+.yalc
+
 .DS_Store
