@@ -1,6 +1,6 @@
 {
   "plugin": ["typedoc-plugin-markdown"],
   "out": "./docs",
-  "mergeReadme": true,
+  "mergeReadme": false,
   "entryPoints": ["./src/index.ts"],
 }

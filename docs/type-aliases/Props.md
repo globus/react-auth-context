@@ -2,7 +2,7 @@
 
 ***
 
-[@globus/react-auth-context](../README.md) / Props
+[@globus/react-auth-context](../globals.md) / Props
 
 # Type Alias: Props
 
@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[Provider.tsx:14](https://github.com/globus/react-auth-context/blob/fe49cc23317de343af9eb96c1e670f94f734d3ff/src/Provider.tsx#L14)
+[Provider.tsx:14](https://github.com/globus/react-auth-context/blob/f12539af272bb8ebd6d198a34aa9ee5c5ed146c2/src/Provider.tsx#L14)

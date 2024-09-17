@@ -1,6 +1,6 @@
 import { GlobusAuthState } from "./State";
 
-type Action = { type: "AUTHENTICATED"; payload: boolean } | { type: "REVOKE" } | { type: "BOOTSTRAPPED" };
+export type Action = { type: "AUTHENTICATED"; payload: boolean } | { type: "REVOKE" } | { type: "BOOTSTRAPPED" };
 
 export const reducer = (
   state: GlobusAuthState,
