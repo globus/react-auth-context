@@ -42,7 +42,7 @@ describe("Provider", () => {
         await waitFor(() => expect(result.current.authorization).toBeDefined());
         await waitFor(() => expect(result.current.authorization?.user).toBeNull());
 
-        await act(() => result.current.authorization?.login());
+        await act(async () => await result.current.authorization?.login());
 
         const url = new URL(window.location.href);
 
@@ -64,7 +64,7 @@ describe("Provider", () => {
         await waitFor(() => expect(result.current.authorization).toBeDefined());
         await waitFor(() => expect(result.current.authorization?.user).toBeNull());
 
-        await act(() => result.current.authorization?.login());
+        await act(async () => await result.current.authorization?.login());
 
         const url = new URL(window.location.href);
 

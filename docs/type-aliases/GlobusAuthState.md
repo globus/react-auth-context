@@ -28,4 +28,4 @@
 
 ## Defined in
 
-[State.ts:3](https://github.com/globus/react-auth-context/blob/2c31bc060e9e5dfb4ea8fae77304d11aff810855/src/State.ts#L3)
+[State.ts:3](https://github.com/globus/react-auth-context/blob/fe49cc23317de343af9eb96c1e670f94f734d3ff/src/State.ts#L3)

@@ -32,7 +32,7 @@ const ExampleComponent = () => {
       {isAuthenticated ? (
         <button onClick={async () => await auth.authorization?.revoke()}>Logout</button>
       ) : (
-        <button  onClick={() => auth.authorization?.login()}>Login</button>
+        <button  onClick={async () => await auth.authorization?.login()}>Login</button>
       )}
     </div>
   );
