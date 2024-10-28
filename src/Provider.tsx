@@ -44,12 +44,21 @@ export const Provider = ({
     dispatch({ type: "REVOKE" });
   };
 
-
   const {
     redirect,
     scopes, 
-    client
+    client,
+    ...config
   } = authorizationManagerConfigruation;
+
+  /**
+   * Remove events from the configuration object.
+   * 
+   * @todo We could probably support dispatching user-provided events
+   * in our `handleAuthenticated` and `handleRevoke` functions, it's just
+   * not clear if it would be necessary.
+   */
+  delete config?.events;    
 
   useEffect(() => {
     const i = authorization.create({
@@ -61,6 +70,7 @@ export const Provider = ({
         authenticated: handleAuthenticated,
         revoke: handleRevoke,
       },
+      ...config,
     });
 
     setInstance(i);
