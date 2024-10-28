@@ -1,6 +1,6 @@
 {
   "name": "@globus/react-auth-context",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A React context for integrating Globus Auth into your application using the Globus JavaScript SDK",
   "main": "dist/umd/index.js",
   "types": "dist/esm/index.d.ts",
@@ -24,7 +24,7 @@
   "author": "Joe Bottigliero",
   "license": "Apache-2.0",
   "peerDependencies": {
-    "@globus/sdk": "^4.2.0 | ^5.0.0",
+    "@globus/sdk": "^4.2.0 || ^5.0.0",
     "react": ">=18",
     "react-dom": ">=18"
   },
