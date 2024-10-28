@@ -14,4 +14,4 @@
 
 ## Defined in
 
-[useGlobusAuth.ts:4](https://github.com/globus/react-auth-context/blob/dd4f18f00c59a4d730366bf281f83506ce9ff987/src/useGlobusAuth.ts#L4)
+[useGlobusAuth.ts:4](https://github.com/globus/react-auth-context/blob/b9aa6f53c0fc0130fd20ef491226e7680c05c07e/src/useGlobusAuth.ts#L4)
