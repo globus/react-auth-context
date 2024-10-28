@@ -8,6 +8,12 @@
 
 A simple React context for managing Globus-related authentication state, built on top of the [@globus/sdk](https://github.com/globus/globus-sdk-javascript).
 
+## Installation
+
+```
+npm install --save @globus/sdk @globus/react-auth-context
+```
+
 ## Usage
 
 The package includes a `<Provider>` that can be configured with a `client`, `scopes`, and `redirect` that will be used to configure an `AuthorizationManager` instance for the context. The `useGlobusAuth` hook can be used to access the authentication state and the `AuthorizationManager` instance.
