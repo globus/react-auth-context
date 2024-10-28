@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[reducer.ts:5](https://github.com/globus/react-auth-context/blob/b9aa6f53c0fc0130fd20ef491226e7680c05c07e/src/reducer.ts#L5)
+[reducer.ts:5](https://github.com/globus/react-auth-context/blob/acec39578d352456428a6d583f46327ad41abe48/src/reducer.ts#L5)
