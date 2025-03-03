@@ -1,4 +1,4 @@
-**@globus/react-auth-context** • [**Docs**](globals.md)
+**@globus/react-auth-context**
 
 ***
 

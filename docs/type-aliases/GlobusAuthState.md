@@ -1,4 +1,4 @@
-[**@globus/react-auth-context**](../README.md) • **Docs**
+[**@globus/react-auth-context**](../README.md)
 
 ***
 
@@ -7,6 +7,8 @@
 # Type Alias: GlobusAuthState
 
 > **GlobusAuthState**: `object`
+
+Defined in: [State.ts:3](https://github.com/globus/react-auth-context/blob/e8139c44837c34e513aa98b148623ed8917c2ed9/src/State.ts#L3)
 
 ## Type declaration
 
@@ -25,7 +27,3 @@
 ### isAuthenticated
 
 > **isAuthenticated**: `boolean`
-
-## Defined in
-
-[State.ts:3](https://github.com/globus/react-auth-context/blob/acec39578d352456428a6d583f46327ad41abe48/src/State.ts#L3)

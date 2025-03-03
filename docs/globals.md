@@ -1,4 +1,4 @@
-[**@globus/react-auth-context**](README.md) • **Docs**
+[**@globus/react-auth-context**](README.md)
 
 ***
 
