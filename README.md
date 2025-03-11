@@ -55,7 +55,7 @@ const ExampleComponent = () => {
         return;
       }
 
-      await instance?.handleCodeRedirect({
+      await authorization?.handleCodeRedirect({
         shouldReplace: false,
       });
     }
