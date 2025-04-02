@@ -4,15 +4,10 @@
 
 # @globus/react-auth-context
 
-## Type Aliases
+## Namespaces
 
-- [GlobusAuthContextProps](type-aliases/GlobusAuthContextProps.md)
-- [GlobusAuthState](type-aliases/GlobusAuthState.md)
-- [Props](type-aliases/Props.md)
-
-## Variables
-
-- [initialState](variables/initialState.md)
+- [Context](@globus/namespaces/Context/README.md)
+- [State](@globus/namespaces/State/README.md)
 
 ## Functions
 

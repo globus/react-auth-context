@@ -6,15 +6,15 @@
 
 # Function: reducer()
 
-> **reducer**(`state`, `action`): [`GlobusAuthState`](../type-aliases/GlobusAuthState.md)
+> **reducer**(`state`, `action`): [`GlobusAuthState`](../@globus/namespaces/State/type-aliases/GlobusAuthState.md)
 
-Defined in: [reducer.ts:5](https://github.com/globus/react-auth-context/blob/e8139c44837c34e513aa98b148623ed8917c2ed9/src/reducer.ts#L5)
+Defined in: [reducer.ts:5](https://github.com/globus/react-auth-context/blob/8d50074d04084ecba3cff2e7f0a819ee0e16115d/src/reducer.ts#L5)
 
 ## Parameters
 
 ### state
 
-[`GlobusAuthState`](../type-aliases/GlobusAuthState.md)
+[`GlobusAuthState`](../@globus/namespaces/State/type-aliases/GlobusAuthState.md)
 
 ### action
 
@@ -22,4 +22,4 @@ Defined in: [reducer.ts:5](https://github.com/globus/react-auth-context/blob/e81
 
 ## Returns
 
-[`GlobusAuthState`](../type-aliases/GlobusAuthState.md)
+[`GlobusAuthState`](../@globus/namespaces/State/type-aliases/GlobusAuthState.md)
