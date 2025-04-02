@@ -2,14 +2,14 @@ const { join } = require('node:path');
 const fs = require('node:fs');
 const { buildSync } = require('esbuild');
 
-const { dependencies, peerDependencies, version } = require("../package.json");
+const { peerDependencies, version } = require("../package.json");
 
 const opts  = {
   entryPoints: ['src/index.ts'],
   absWorkingDir: join(__dirname, '..'),
   bundle: true,
   sourcemap: true,
-  external: Object.keys({ ...dependencies, ...peerDependencies }),
+  external: Object.keys({ ...peerDependencies }),
 };
 
 buildSync({
