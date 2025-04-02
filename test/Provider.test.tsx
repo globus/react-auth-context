@@ -19,6 +19,7 @@ describe("Provider", () => {
     it("render", async () => {
         const Component  = () => {
             const { isAuthenticated, authorization } = useGlobusAuth();
+            expect(authorization).toBeDefined();
             return isAuthenticated ? "AUTHENTICATED" : "NOT AUTHENTICATED";
         }
         await render(
@@ -28,7 +29,6 @@ describe("Provider", () => {
         )
        expect(screen.getByText('NOT AUTHENTICATED')).toBeInTheDocument();
     });
-
 
 
     it("login", async () => {

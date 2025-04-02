@@ -1,7 +1,7 @@
 import React, {
-  useState,
   useReducer,
   useEffect,
+  useCallback,
 } from "react";
 
 import Context from "./Context";
@@ -27,22 +27,6 @@ export const Provider = ({
     // @ts-ignore
     globalThis.GLOBUS_SDK_ENVIRONMENT = environment;
   }
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const [instance, setInstance] = useState<
-    ReturnType<typeof authorization.create>
-  >();
-  
-  const handleAuthenticated = ({
-    isAuthenticated,
-  }: {
-    isAuthenticated: boolean;
-  }) => {
-    dispatch({ type: "AUTHENTICATED", payload: isAuthenticated });
-  };
-
-  const handleRevoke = () => {
-    dispatch({ type: "REVOKE" });
-  };
 
   const {
     redirect,
@@ -58,36 +42,48 @@ export const Provider = ({
    * in our `handleAuthenticated` and `handleRevoke` functions, it's just
    * not clear if it would be necessary.
    */
-  delete config?.events;    
+  delete config?.events;
 
-  useEffect(() => {
-    const i = authorization.create({
+  const [state, dispatch] = useReducer(reducer, initialState, (initialArg) => {
+    const instance = authorization.create({
       redirect,
       scopes,
       client,
       useRefreshTokens: true,
-      events: {
-        authenticated: handleAuthenticated,
-        revoke: handleRevoke,
-      },
       ...config,
     });
+    return {
+      ...initialArg,
+      authorization: instance,
+      events: instance.events,
+      isAuthenticated: instance.authenticated
+    }
+  });
 
-    setInstance(i);
+  const handleAuthenticated = useCallback(({
+    isAuthenticated,
+  }: {
+    isAuthenticated: boolean;
+  }) => {
+    dispatch({ type: "AUTHENTICATED", payload: isAuthenticated });
+  }, []);
 
+  const handleRevoke = useCallback(() => {
+    dispatch({ type: "REVOKE" });
+  }, []);
+
+  useEffect(() => {
+    state.authorization?.events.revoke.addListener(handleRevoke);
+    state.authorization?.events.authenticated.addListener(handleAuthenticated);
     return () => {
-      i.events.revoke.removeListener(handleRevoke);
-      i.events.authenticated.removeListener(handleAuthenticated);
+      state.authorization?.events.revoke.removeListener(handleRevoke);
+      state.authorization?.events.authenticated.removeListener(handleAuthenticated);
     };
-  }, [redirect, scopes, client]);
+  }, [state.authorization, handleRevoke, handleAuthenticated]);
 
   return (
     <Context.Provider
-      value={{
-        ...state,
-        authorization: instance,
-        events: instance?.events,
-      }}
+      value={state}
     >
       {children}
     </Context.Provider>
