@@ -8,7 +8,7 @@
 
 > **GlobusAuthState** = `object`
 
-Defined in: [State.ts:3](https://github.com/globus/react-auth-context/blob/8d50074d04084ecba3cff2e7f0a819ee0e16115d/src/State.ts#L3)
+Defined in: [State.ts:3](https://github.com/globus/react-auth-context/blob/52bf79c1b0da59e003455ade9253c79ab1bc9b74/src/State.ts#L3)
 
 ## Properties
 
@@ -16,7 +16,7 @@ Defined in: [State.ts:3](https://github.com/globus/react-auth-context/blob/8d500
 
 > **authorization**: `AuthorizationManager` \| `undefined`
 
-Defined in: [State.ts:6](https://github.com/globus/react-auth-context/blob/8d50074d04084ecba3cff2e7f0a819ee0e16115d/src/State.ts#L6)
+Defined in: [State.ts:6](https://github.com/globus/react-auth-context/blob/52bf79c1b0da59e003455ade9253c79ab1bc9b74/src/State.ts#L6)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [State.ts:6](https://github.com/globus/react-auth-context/blob/8d500
 
 > **error**: `Error` \| `undefined`
 
-Defined in: [State.ts:5](https://github.com/globus/react-auth-context/blob/8d50074d04084ecba3cff2e7f0a819ee0e16115d/src/State.ts#L5)
+Defined in: [State.ts:5](https://github.com/globus/react-auth-context/blob/52bf79c1b0da59e003455ade9253c79ab1bc9b74/src/State.ts#L5)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [State.ts:5](https://github.com/globus/react-auth-context/blob/8d500
 
 > **events**: `AuthorizationManager`\[`"events"`\] \| `undefined`
 
-Defined in: [State.ts:7](https://github.com/globus/react-auth-context/blob/8d50074d04084ecba3cff2e7f0a819ee0e16115d/src/State.ts#L7)
+Defined in: [State.ts:7](https://github.com/globus/react-auth-context/blob/52bf79c1b0da59e003455ade9253c79ab1bc9b74/src/State.ts#L7)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [State.ts:7](https://github.com/globus/react-auth-context/blob/8d500
 
 > **isAuthenticated**: `boolean`
 
-Defined in: [State.ts:4](https://github.com/globus/react-auth-context/blob/8d50074d04084ecba3cff2e7f0a819ee0e16115d/src/State.ts#L4)
+Defined in: [State.ts:4](https://github.com/globus/react-auth-context/blob/52bf79c1b0da59e003455ade9253c79ab1bc9b74/src/State.ts#L4)
