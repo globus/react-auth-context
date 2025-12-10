@@ -1,8 +1,11 @@
 {
   "name": "@globus/react-auth-context",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "A React context for integrating Globus Auth into your application using the Globus JavaScript SDK",
-  "repository": "github:globus/react-auth-context",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/globus/react-auth-context.git"
+  },
   "main": "dist/umd/index.js",
   "types": "dist/esm/index.d.ts",
   "exports": {
