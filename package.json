@@ -41,7 +41,7 @@
     "@types/jest": "^30.0.0",
     "@types/react": "^18.3.27",
     "@types/react-dom": "^18.3.7",
-    "esbuild": "^0.27.1",
+    "esbuild": "^0.28.0",
     "jest": "^30.3.0",
     "jest-environment-jsdom": "^30.3.0",
     "jest-location-mock": "^3.0.0",
